@@ -1,7 +1,7 @@
 <div class="sticky-wrapper" id="mainmenu-sticky-wrapper">
     <header style="" class="header">
         <nav class="navbar navbar-custom" role="navigation">
-            <div class="container">
+            <div class="">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
                         <span class="sr-only">Toggle navigation</span>

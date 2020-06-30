@@ -16,9 +16,13 @@ class HomeController extends Controller
     {
         $newPosts = Post::orderByDesc('created_at')->take(5)->get();
         $category = Category::with('posts')->where('name', 'dịch vụ doanh nghiệp')->first();
+        $parentCategories = Category::with(['childs.posts', 'childs'  => function ($query) {
+            $query->whereHas('posts');
+        }])->isParent()->get();
         $data = [
             'newPosts' => $newPosts,
-            'posts' => !empty($category) ? $category->posts : []
+            'posts' => !empty($category) ? $category->posts : [],
+            'parentCategories' => $parentCategories
         ];
         return view('home2', $data);
     }

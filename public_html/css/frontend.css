@@ -167,3 +167,7 @@ i[class^="icon-"] {
     cursor: pointer;
     margin-right: 10px;
 }
+
+.nav>li>a {
+     padding: 10px 15px;
+}
